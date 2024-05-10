@@ -1,7 +1,7 @@
 import express from "express";
-const router = express.Router();
-
 import { hello } from "../../controllers/general";
+
+const router = express.Router();
 
 router.get("/", hello);
 

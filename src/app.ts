@@ -1,11 +1,9 @@
-import express, { Express } from "express";
+import type { Express } from "express";
+import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
-import swaggerUI from "swagger-ui-express";
-
-import swaggerDocument from "./lib/swagger";
 
 import generalRoutes from "./routes/general";
 
@@ -19,7 +17,6 @@ app.use(helmet());
 app.use(bodyParser.json());
 
 app.use("/", generalRoutes);
-app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
 app.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
