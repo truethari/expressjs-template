@@ -15,7 +15,7 @@
   "rules": {
     "@typescript-eslint/strict-boolean-expressions": "off",
     "prettier/prettier": "error",
-    "no-var": "warn",
+    "no-var": "error",
     "@typescript-eslint/prefer-nullish-coalescing": "off",
     "@typescript-eslint/no-misused-promises": "off"
   }
